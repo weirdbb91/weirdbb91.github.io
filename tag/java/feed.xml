@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/java/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-11-20T08:33:54+09:00</updated>
+  <id>http://localhost:4000/tag/java/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">IT Technical Training | </title>
+  
+
+  
+    <subtitle>개인 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">자바 포스팅 템플릿</title>
+      <link href="http://localhost:4000/javaTemplate" rel="alternate" type="text/html" title="자바 포스팅 템플릿" />
+      <published>2020-11-20T02:41:00+09:00</published>
+      <updated>2020-11-20T02:41:00+09:00</updated>
+      <id>http://localhost:4000/javaTemplate</id>
+      <content type="html" xml:base="http://localhost:4000/javaTemplate">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Java 학습 내용들은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javaTemplate&quot;&gt;자바 포스팅 템플릿&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Java - String&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 글은 자바 포스팅 템플릿입니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Baek</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">Java 학습 내용들은 여러 절로 구성되어 있습니다. 자바 포스팅 템플릿 Java - String</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
