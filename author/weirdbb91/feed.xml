@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/weirdbb91/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-11-20T14:32:57+09:00</updated>
+  <updated>2020-11-21T06:43:38+09:00</updated>
   <id>http://localhost:4000/author/weirdbb91/feed.xml</id>
 
   
@@ -32,6 +32,46 @@
 
   
     <entry>
+      <title type="html">자료구조 포스팅 템플릿</title>
+      <link href="http://localhost:4000/dataStructureTemplate" rel="alternate" type="text/html" title="자료구조 포스팅 템플릿" />
+      <published>2020-11-20T02:45:00+09:00</published>
+      <updated>2020-11-20T02:45:00+09:00</updated>
+      <id>http://localhost:4000/dataStructureTemplate</id>
+      <content type="html" xml:base="http://localhost:4000/dataStructureTemplate">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;DataStructure 학습 내용들은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./dataStructureTemplate&quot;&gt;자료구조 포스팅 템플릿&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./dataStructureTemplate&quot;&gt;자료구조 포스팅 템플릿2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 글은 자료구조 포스팅 템플릿입니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Baek</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="dataStructure" />
+      
+
+      
+        <summary type="html">DataStructure 학습 내용들은 여러 절로 구성되어 있습니다. 자료구조 포스팅 템플릿 자료구조 포스팅 템플릿2</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">자바 포스팅 템플릿</title>
       <link href="http://localhost:4000/javaTemplate" rel="alternate" type="text/html" title="자바 포스팅 템플릿" />
       <published>2020-11-20T02:41:00+09:00</published>
@@ -40,7 +80,7 @@
       <content type="html" xml:base="http://localhost:4000/javaTemplate">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Java 학습 내용들은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javaTemplate&quot;&gt;자바 포스팅 템플릿&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Java - String&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javaTemplate&quot;&gt;자바 포스팅 템플릿2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;이 글은 자바 포스팅 템플릿입니다.&lt;/p&gt;
@@ -72,47 +112,7 @@
       
 
       
-        <summary type="html">Java 학습 내용들은 여러 절로 구성되어 있습니다. 자바 포스팅 템플릿 Java - String</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">자료구조 포스팅 템플릿</title>
-      <link href="http://localhost:4000/dataStructureTemplate" rel="alternate" type="text/html" title="자료구조 포스팅 템플릿" />
-      <published>2020-11-20T02:41:00+09:00</published>
-      <updated>2020-11-20T02:41:00+09:00</updated>
-      <id>http://localhost:4000/dataStructureTemplate</id>
-      <content type="html" xml:base="http://localhost:4000/dataStructureTemplate">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Java 학습 내용들은 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./javaTemplate&quot;&gt;자바 포스팅 템플릿&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Java - String&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이 글은 자료구조 포스팅 템플릿입니다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Baek</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="dataStructure" />
-      
-
-      
-        <summary type="html">Java 학습 내용들은 여러 절로 구성되어 있습니다. 자바 포스팅 템플릿 Java - String</summary>
+        <summary type="html">Java 학습 내용들은 여러 절로 구성되어 있습니다. 자바 포스팅 템플릿 자바 포스팅 템플릿2</summary>
       
 
       
