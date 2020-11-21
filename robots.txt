@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://weirdbb91.github.io/sitemap.xml
