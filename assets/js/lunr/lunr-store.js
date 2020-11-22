@@ -1,49 +1,7 @@
----
-layout: none
----
-
-var store = [
-  {%- for c in site.collections -%}
-    {%- if forloop.last -%}
-      {%- assign l = true -%}
-    {%- endif -%}
-    {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%}
-    {%- for doc in docs -%}
-      {%- if doc.header.teaser -%}
-        {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture -%}
-      {%- else -%}
-        {%- assign teaser = site.teaser -%}
-      {%- endif -%}
-      {
-        "title": {{ doc.title | jsonify }},
-        "excerpt":
-          {%- if site.search_full_content == true -%}
-            {{ doc.content | newline_to_br |
-              replace:"<br />", " " |
-              replace:"</p>", " " |
-              replace:"</h1>", " " |
-              replace:"</h2>", " " |
-              replace:"</h3>", " " |
-              replace:"</h4>", " " |
-              replace:"</h5>", " " |
-              replace:"</h6>", " "|
-            strip_html | strip_newlines | jsonify }},
-          {%- else -%}
-            {{ doc.content | newline_to_br |
-              replace:"<br />", " " |
-              replace:"</p>", " " |
-              replace:"</h1>", " " |
-              replace:"</h2>", " " |
-              replace:"</h3>", " " |
-              replace:"</h4>", " " |
-              replace:"</h5>", " " |
-              replace:"</h6>", " "|
-            strip_html | strip_newlines | truncatewords: 50 | jsonify }},
-          {%- endif -%}
-        "categories": {{ doc.categories | jsonify }},
-        "tags": {{ doc.tags | jsonify }},
-        "url": {{ doc.url | absolute_url | jsonify }},
-        "teaser": {{ teaser | absolute_url | jsonify }}
-      }{%- unless forloop.last and l -%},{%- endunless -%}
-    {%- endfor -%}
-  {%- endfor -%}]
+var store = [{
+        "title": "Template",
+        "excerpt":"코드 언급 import java.util.*; 코드 삽입 1 2 3 4 5 public static class Main { public static void main(String[] args) { System.out.println(\"hello world\"); } } 텍스트 박스 /assets/images/background.jpg 알림 강조하기 기본 알림 박스. 부연설명 첨삭 You can just type sout1 2. 링크 이메일 링크: address@example.com 버튼 줄 삽입 그대로...","categories": ["java"],
+        "tags": ["java"],
+        "url": "http://localhost:4000/java/template/",
+        "teaser": "http://localhost:4000/assets/images/face_manager.jpg"
+      }]
