@@ -110,7 +110,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/weirdbb91"
 
-destination: ../weirdbb91.github.io
+# destination: ../weirdbb91.github.io
 # Reading Files
 include:
   - .htaccess
