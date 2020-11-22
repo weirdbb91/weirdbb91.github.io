@@ -1,0 +1,25 @@
+# main links
+main:
+  - title: Home
+    url: /
+  - title: Tags
+    url: /tags
+
+docs:
+  - title: 복습
+    children:
+      - title: 자바
+        url: /categories/#java
+      - title: 자료구조
+        url: /categories/#dataStructure
+      - title: 알고리즘
+        url: /categories/#algorithm
+      - title: 그 외
+        url: /categories
+
+  - title: 기록
+    children:
+      - title: 운동
+        url: /categories/#workout
+      - title: 일기
+        url: /categories/#journal
