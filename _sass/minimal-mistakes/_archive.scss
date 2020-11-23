@@ -47,12 +47,20 @@
 }
 
 .archive__item-title {
+  margin-top: 0;
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
-
+  // 아래는 수정본입니다.
+  // 제목을 한줄로만 출력하며 긴 부분은 ...으로 치환합니다.
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
   a[rel="permalink"]::before {
     content: '';
     position: absolute;
@@ -76,7 +84,15 @@
 }
 
 .archive__item-excerpt {
-  max-height: 1px;
+  // 썸네일 한줄 요약 추가 내용
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  // 여기까지
+
   margin-top: 0;
   font-size: $type-size-6;
 
