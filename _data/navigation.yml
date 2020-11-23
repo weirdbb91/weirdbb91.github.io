@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: Home
-    url: /
+  - title: Categories
+    url: /categories
   - title: Tags
     url: /tags
 
@@ -14,8 +14,8 @@ docs:
         url: /categories/#dataStructure
       - title: 알고리즘
         url: /categories/#algorithm
-      - title: 그 외
-        url: /categories
+      - title: 수학
+        url: /categories/#mathematics
 
   - title: 기록
     children:
