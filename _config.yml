@@ -27,7 +27,7 @@ repository               : "weirdbb91/blogmaker" # GitHub username/repo-name e.g
 teaser                   : /assets/images/face_manager.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Home" # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" #, "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -177,7 +177,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 9 # amount of posts to show
+paginate: 12 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -246,7 +246,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true

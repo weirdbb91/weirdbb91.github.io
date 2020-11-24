@@ -21,7 +21,6 @@
 .archive__item {
   position: relative;
   float: left;
-  width: 33%;
   padding: 1em;
 
   a {
@@ -146,6 +145,8 @@
    ========================================================================== */
 
 .list__item {
+  width: 33%;
+  float: left;
   .page__meta {
     margin: 0 0 4px;
     font-size: 0.6em;
@@ -236,7 +237,7 @@
   }
 
   .archive__item-excerpt {
-    display: none;
+    display: block;
 
     @include breakpoint($medium) {
       display: block;
