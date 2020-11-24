@@ -60,7 +60,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+  font-size: $type-size-5;
+
   a[rel="permalink"]::before {
     content: '';
     position: absolute;
