@@ -1,0 +1,14 @@
+{% if site.category_archive.type and page.categories[0] %}
+  <div class="cate">
+    {% for category in site.categories %}
+      <nav class="shit">
+        <h3>{{ category[0] }}</h3>
+        <ul>
+        {% for post in category[1] %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </nav>
+    {% endfor %}
+  </div>
+{% endif %}

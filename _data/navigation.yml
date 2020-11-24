@@ -16,6 +16,8 @@ docs:
         url: /categories/#algorithm
       - title: Git
         url: /categories/#git
+      - title: Liquid
+        url: /categories/#liquid
       - title: 수학
         url: /categories/#math
 
