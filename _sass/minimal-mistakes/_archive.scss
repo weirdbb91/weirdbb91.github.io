@@ -20,6 +20,7 @@
 
 .archive__item {
   position: relative;
+  width: 100%;
   float: left;
   padding: 1em;
 
@@ -173,9 +174,9 @@
 
 .grid__item {
   margin-bottom: 2em;
-
+  float: left;
+  max-width: 200px; /* 하단부 관련 게시글 크기 제한 */
   @include breakpoint($small) {
-    float: left;
     width: span(5 of 10);
 
     &:nth-child(2n + 1) {
