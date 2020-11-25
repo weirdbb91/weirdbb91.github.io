@@ -1,13 +1,14 @@
 ---
 header:
   teaser            : # 썸네일 이미지 /assets/images/face_army.jpg
-title               : # 제목
-excerpt             : 템플릿입니다. # 썸네일 한줄 요약
-last_modified_at    : # 2020-11-22 마지막 수정일
-categories          : 
+title               : 템플릿 # 제목
+excerpt             : 템플릿 입니다. # 썸네일 한줄 요약
+last_modified_at    : # 2020-11-22 # 작성일 또는 마지막 수정일
+categories          : # java dataStructure algorithm git liquid math / workout journal
 tags                : 
-toc                 : true # 목차 사용여부
-toc_label           : 목차의 제목 # 목차 제목
+toc                 : # 목차 사용 default: true
+toc_label           : # 목차 제목 default: "목차"
+# 알림박스 = {: .notice--info}
 ---
 
 

@@ -252,3 +252,5 @@ defaults:
       related: true
       sidebar:
         nav: "docs"
+      toc: true
+      toc_label: "목차"

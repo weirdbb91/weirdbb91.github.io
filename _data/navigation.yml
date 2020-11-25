@@ -20,6 +20,8 @@ docs:
         url: /categories/#liquid
       - title: 수학
         url: /categories/#math
+      - title: 수업
+        url: /categories/#course
 
   - title: 기록
     children:
