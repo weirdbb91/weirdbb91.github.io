@@ -15,8 +15,7 @@ toc_label           : # 목차 제목
 [https://en.wikipedia.org/wiki/First-class_citizen](https://en.wikipedia.org/wiki/First-class_citizen)
 
 위키에서는 일급 객체의 정의를 다음과 같이 내리고 있다  
----
----
+
 ---
 
 ```
@@ -47,11 +46,11 @@ definition: All items have certain fundamental rights.
 [https://isooo.github.io/etc/2019/11/13/%EC%9D%BC%EA%B8%89%EA%B0%9D%EC%B2%B4.html](https://isooo.github.io/etc/2019/11/13/%EC%9D%BC%EA%B8%89%EA%B0%9D%EC%B2%B4.html)
 
 다음은 모던 자바의 장점에 대해 기술한 글의 일부이다.
----
 
 ---
 
 일급 객체 (First-class citizen)
+
 ---
 
 <br>
