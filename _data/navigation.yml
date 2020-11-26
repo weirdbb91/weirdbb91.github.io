@@ -16,12 +16,12 @@ docs:
         url: /categories/#algorithm
       - title: Git
         url: /categories/#git
-      - title: Liquid
-        url: /categories/#liquid
       - title: 수학
         url: /categories/#math
       - title: 수업
         url: /categories/#course
+      - title: ETC
+        url: /categories/#etc
 
   - title: 기록
     children:

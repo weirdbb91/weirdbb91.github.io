@@ -12,7 +12,7 @@ toc_label           : # 목차 제목 default: "목차"
 ---
 ---
 
-앵귤러JS 커밋 메시지 컨벤션을 요약해보자  
+[앵귤러JS 커밋 메시지 컨벤션](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)을 요약해보자  
 출처 : [https://gist.github.com/stephenparish/9941e89d80e2bc58a153](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
 
 ---
@@ -62,14 +62,14 @@ git bisect skip $(git rev-list --grep irrelevant <good place> HEAD)
 
 ---
 
-`<type>` 개요
+`<type>` 커밋 개요 (종류)
  * feat (feature)
  * fix (bug fix)
  * docs (documentation)
  * style (formatting, missing semi colons, …)
  * refactor
  * test (when adding missing tests)
- * chore (maintain)
+ * chore (maintain) 생산적이지 않은 커밋
 
 ---
 
@@ -91,17 +91,16 @@ ngHref, ngClick, ngView 등등..
 
 ## `<body>`
 
-`<subject>`처럼 `간략하게` 현재형 'change'로 적는다.  
-`수정 대상`과 `이유`가 들어간다.  
+구체적인 상세`수정 대상`과 `행동`이 간략하게 `요약`해서 들어간다.  
 
 ---
 ---
 
 ## `<footer>`
 
-Breaking changes  
-`주요 변경 사항`으로 무엇을 왜 고쳤는지 상세히 기재한다.  
-justification and migration notes
+`주요 변경 사항`(Breaking changes)으로 `무엇을 왜 고쳤는지 상세히` 기재한다.  
+justification and migration notes 등등  
+어떤 `의미`를 가졌는지나 `바뀐 부분`을 `구체적`으로 기재해도 좋다.  
 
 아래는 예시이다.
 
@@ -243,14 +242,5 @@ scope: {
 
 The removed `inject` wasn't generaly useful for directives so there should be no code using it.
 ```
-
----
----
-
-## 스크립트
-
-[https://github.com/btford/grunt-conventional-changelog](https://github.com/btford/grunt-conventional-changelog)  
-
-친절하게도 구현하고 배포까지 하신 분이 계셨다.
 
 ---
