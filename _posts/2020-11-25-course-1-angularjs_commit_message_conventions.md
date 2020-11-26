@@ -5,7 +5,7 @@ title               : 커밋 메시지 # 제목
 excerpt             : AngularJS commit message conventions # 썸네일 한줄 요약
 last_modified_at    : 2020-11-25 # 2020-11-22 # 작성일 또는 마지막 수정일
 categories          : course # java dataStructure algorithm git liquid math course / workout journal
-tags                : course
+tags                : convention
 toc                 : # 목차 사용 default: true
 toc_label           : # 목차 제목 default: "목차"
 # 알림박스 = {: .notice--info}
