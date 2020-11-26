@@ -4,7 +4,7 @@ header:
 title               : 템플릿 # 제목
 excerpt             : 템플릿 입니다. # 썸네일 한줄 요약
 last_modified_at    : # 2020-11-22 # 작성일 또는 마지막 수정일
-categories          : # java dataStructure algorithm git liquid math / workout journal
+categories          : # java dataStructure algorithm git math course etc/ workout journal
 tags                : 
 toc                 : # 목차 사용 default: true
 toc_label           : # 목차 제목 default: "목차"
