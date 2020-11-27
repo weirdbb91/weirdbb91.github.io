@@ -479,7 +479,7 @@ long 타입을 명시할 때는 대문자 `L`을 씁니다(소문자 금지)
 ---
 ---
 
-## 5 이름 짓기 Naming
+# 5 이름 짓기 Naming
 
 ---
 
@@ -537,7 +537,8 @@ JUnit Test 메서드는 특별히 밑줄`_`로 논리적 구성요소를 구분�
 
 ### 5.2.4 상수 이름
 
-상수는 각 대문자 단어를 밑줄로 구분하는 CONSTANT_CASE 방식이다  
+상수는 각 대문자 단어를 밑줄로 구분하는 CONSTANT_CASE 방식이며  
+일반적으로 명사 또는 명사구로 짓습니다.    
 
 상수는 값이 완전 불변하고 메서드에서 부작용이 없는 static final 필드입니다.  
 
@@ -565,5 +566,264 @@ static final Logger logger = Logger.getLogger(MyClass.getName());
 static final String[] nonEmptyArray = {"these", "can", "change"};
 ```
 
+---
 
+### 5.2.5 상수가 아닌 필드 이름(static 등)
+
+lowerCamelCase로 작성  
+일반적으로 명사 또는 명사 구입니다. (ex. computedValues, index)  
+
+---
+
+### 5.2.6 매개변수(Prameter) 이름
+
+lowerCamelCase로  
+public 메서드에서 한 문자 변수 이름은 피해야합니다. (ex. a, c, r)
+
+---
+
+### 5.2.7 지역 변수 이름
+
+lowerCamelCase  
+final 불변이어도 지역 변수는 상수가 아니며 상수와 같은 스타일을 지정해서도 안됩니다.  
+(확실히 구분이 가능하도록 하라고 하네요)
+
+---
+
+### 5.2.8 타입 변수 이름 (제네릭의 그 `<T>`)
+
+두 가지 스타일 중 하나로 이름이 지정됩니다.
+
+ * 단일 대문자이며 숫자 하나까지는 추가 할 수 있습니다 (ex. E, T, X, T2)  
+ * 클래스 이름에 대문자 T(ex. RequestT, FooBarT)  
+
+## 5.3 카멜 케이스 : 정의
+
+두문자어나 "IPv6", "iOS"같은 특별한 구조의 경우에도 camel case로 변환하는  
+합리적인 방법이 몇가지 있습니다. 예측 가능성을 높이기 위해 Google 스타일은  
+아래와 같은 (거의)결정론적 체계를 따릅니다.
+
+이름은 산문 형식으로 시작합니다 :
+
+1. 구를 일반 ASCII로 변환하고 `'`를 제거 (ex. "Müller's algo" -> "Muellers algo")
+2. 그 결과를 단어들로 나눕니다. (공백, 구두점, 하이픈 등으로 분리)
+3. 이미 camel case인 단어가 있다면 재분할을 권장합니다 (ex. "AdWords" -> "ad words")  
+  "iOS" 같은건 camel case도 아니고 맞는 규격도 없어서 재분할이 권장되지 않습니다. <br><br> 
+4. 이제 모든 것(약어 포함)을 소문자로 바꾸고 첫번째 문자만 대문자로 표시합니다.  
+5. 모든 단어를 결합합니다.  
+    ... 이것이 UpperCamelCase  
+    ... 여기서 첫번째 문자만 소문자로 바꾸면 lowerCamelCase  
+
+원래 단어의 대소문자는 거의 무시됩니다. 
+
+|원래 단어|권장|금지|
+|-|-|-|
+|"XML HTTP request"|XmlHttpRequest|XMLHTTPRequest|
+|"new customer ID"|newCustomerId|newCustomerID|
+|"inner stopwatch"|innerStopwatch|innerStopWatch|
+|"supports IPv6 on iOS?"|supportsIpv6OnIos|supportsIPv6OnIOS|
+|"YouTube importer"|YouTubeImporter<br>YoutubeImporter*	
+
+YoutubeImporter*는 허용되지만 권장되지는 않습니다.
+
+일부 단어는 애매하게 하이픈으로 연결되기도 합니다.  
+예를 들어 "nonempty"나 "non-empty"는 모두 맞는 말이므로  
+메서드 이름으로 checkNonempty나 checkNonEmpty도 마찬가지로 인정합니다.
+
+---
+---
+
+#6 프로그래밍 실습
+
+---
+
+## 6.1 @Override: 항상 사용
+메서드는 @Override Annotation이 적법하면 꼭 씁니다. 아래의 경우 포함  
+* 수퍼 클래스 메소드를 재정의(overriding)하는 클래스 메소드
+* 인터페이스 메소드를 구현하는 클래스 메소드
+* 수퍼 인터페이스 메소드를 재지정(respecifying)하는 인터페이스 메소드
+
+예외 : @Override는 부모 메서드가 @Deprecated인 경우 생략 할 수 있습니다 
+
+---
+
+## 6.2 발생한 예외 : 무시 금지
+
+아래의 경우를 제외하고 발생한 예외에 아무것도 하지 않는 것은 매우 드뭅니다.  
+(보통 로그에 기록하거나 `불가능`하다 판단되면 AssertionError로 다시 던집니다)
+
+catch 블록에서 아무것도 안해도 되는 상황은 아래에 주석으로 설명되어 있습니다.
+
+```java
+try {
+  int i = Integer.parseInt(response);
+  return handleNumericResponse(i);
+} catch (NumberFormatException ok) {
+  // 숫자가 아님; 상관없음, 계속 진행
+}
+return handleTextResponse(response);
+```
+
+예외 : 예정된 예외일 경우에는 이름을 expected로 지어 주석 생략이 가능합니다  
+
+```java
+try {
+  emptyStack.pop();
+  fail();
+} catch (NoSuchElementException expected) {
+}
+```
+
+---
+
+## 6.3 static 멤버 : 클래스로 접근
+
+static 클래스 멤버에 대해 참조할 때는 해당 클래스의 이름으로 접근합니다  
+클래스 타입의 표현이나 참조의 형태로는 접근하지 않습니다
+
+```java
+Foo aFoo = ...;
+Foo.aStaticMethod(); // 좋습니다
+aFoo.aStaticMethod(); // 나쁩니다
+somethingThatYieldsAFoo().aStaticMethod(); // 금지
+```
+
+---
+
+## 6.4 종결자 Finalizer : 쓰지않음
+
+Object.finalize를 재정의override하는 하는 일은 극히 드뭅니다  
+
+팁 : 하지 마십시오.  
+꼭 필요한 경우에는 반드시 먼저 Effective Java Item 7의 종결자 회피법을 이해한 뒤  
+하지 마십시오.
+
+원문  
+Tip: Don't do it. If you absolutely must, first read and understand  
+Effective Java Item 7, "Avoid Finalizers," very carefully, and then don't do it.  
+하지 마십시오.
+
+---
+---
+
+# Javadoc
+
+---
+
+## 7.1 서식
+
+---
+
+### 7.1.1 일반 형식
+
+Javadoc 블록의 기본 형식은 다음과 같습니다.
+
+```java
+/ ** 
+ * 여러 줄의 Javadoc 텍스트가 여기에 작성됩니다. 
+ * 일반적으로 래핑됩니다 ... 
+ * / public int method ( String p1 ) { ... }
+```
+
+
+이해가 어려워 [stackoverflow](https://stackoverflow.com/questions/19172015/what-exactly-is-javadoc)에서 추가 예제를 가져왔습니다  
+
+JavaDoc의 경우 일반 주석과는 다르게 주석 안에 기본적인 HTML을 작성할 수도 있고  
+작성된 HTML 구문을 통해 출력을 얻을 수 있습니다.
+
+```
+/**java
+   * First paragraph.
+   * <p><ul>
+   * <li>the first item
+   * <li>the second item
+   * <li>the third item
+   * <ul><p>
+   * Second paragraph.
+   */
+```
+
+다시 Google Java Style Guide 본문으로 돌아가겠습니다.
+
+
+한 줄 예제 :
+
+```
+/ ** 아주 짧은 Javadoc입니다. * /
+```
+
+기본 형식은 항상 허용됩니다.  
+마커 포함 주석 전체가 한 줄에 들어갈 수 있는 경우에 한 줄 형식을 씁니다  
+이는 @return과 같은 블록 태그가 없는 경우에만 적용됩니다  
+
+---
+
+### 7.1.2 단락
+
+앞에 선행 별표 `*`만 하나있는 빈 줄은 각 단락 사이 블록태그 그룹(있는 경우) 앞에 나타납니다.  
+각 단락 중 두 번째만 `<p>`를 가지며 첫번째 단어 바로 전에 붙이고 뒤에 공백은 없습니다.
+
+---
+
+### 7.1.3 블록태그
+
+---
+
+사용되는 표준 블록태그들은 @param, @return, @throws, @deprecated 순서로 쓰며,  
+이것들은 설명없이 표시되지 않습니다. 블록태그가 길어져 한 줄이 넘어가면  
+다음 줄에서 @보다 4칸 이상 들여쓰기하고 이어서 작성합니다
+
+---
+
+## 7.2 소제목 The summary fragment
+각 Javadoc 블록은 매우 중요하지만 간단한 소제목으로 시작됩니다.  
+클래스 및 메서드 인덱스와 같은 특정 컨텍스트 이외의 유일한 텍스트입니다.
+
+소제목은 완전한 문장이 아닌 명사구 또는 동사구입니다.  
+A {@code Foo} is a... 또는 This method returns...와 같이 시작하지도 않고  
+Save the record. 처럼 명령조로 하지도 않습니다.  
+
+그렇지만 완전한 문장인 것처럼 대문자 구분과 구두점도 씁니다.
+
+일반적인 `실수` :  /** @return the customer ID */ 이런식 경우가 많은데  
+`/** Returns the customer ID. */` 이게 맞습니다
+
+---
+
+## 7.3 Javadoc이 쓰이는 곳
+
+---
+
+일단 모든 public클래스와  
+클래스의 public 또는 protected 멤버와 아래(Section 7.3.4)의 몇몇 예외들
+
+---
+
+### 7.3.1 예외 : 자명한 메서드
+
+JavaDoc은 getFoo와 같은 "단순하고 명백한" 메소드에 대해서는 선택 사항입니다.  
+
+중요 : 일반적인 독자는 모를 수 있는 내용이라면 이 예외를 인용하지 마세요.  
+(ex. getCanonicalName라는 메서드의 경우 "CanonicalName"이라는 용어가  
+무엇을 의미하는지 모를 수 있다면 생략하지 마세요
+
+---
+
+### 7.3.2 예외 : 재정의 override
+
+수퍼 타입 ​​메소드를 재정의하는 메소드에 반드시 JavaDoc을 써야만 것은 아닙니다.
+
+---
+
+### 7.3.4 필요없는 경우 Javadoc
+
+다른 클래스나 멤버에 필요하거나 요구되는 Javadoc이 있는 경우  
+주석으로 이미 클래스 또는 멤버의 전체적인 목적이나 동작을 정의한 경우
+
+필수가 아닌 Javadoc은 섹션 7.1.2, 7.1.3, 7.2의 규칙이 엄격하게 요구되지는 않지만 물론 권장됩니다.
+
+---
+---
+
+수고하셨습니다 나 자신
 
