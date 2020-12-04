@@ -64,16 +64,26 @@ toc_label           : # 목차 제목
 ---
 
 ## Remote
-  - fetch
+
+  - fetch <-> push
     - : 원격 저장소의 커밋들을 로컬 저장소로 로드
   - pull
-    - : fetch와 merge를 한번에 수행함
-    - --rebase : fetch와 rebase를 한번에 수행함
-  - push
+    - : fetch + merge
+    - --rebase : fetch + rebase
+  - push <-> fetch
     - : 로컬 저장소의 커밋들을 원격 저장소에 반영함
+
+  - 공통 사용가능 인자
+    - \<REMOTE\> \<PLACE\>
+      - \<PLACE\>브랜치의 모든 커밋을 \<REMOTE\>의 \<LACE\>브랜치로 작업
+    - \<REMOTE\> \<SOURCE\>:\<DESTINATION\>
+      - \<SOURCE\>를 \<REMOTE\>의 \<DESTINATION\> 이름으로 (없다면 생성)작업
+    - \<REMOTE\> :\<DESTINATION\>
+      - null을 \<REMOTE\>의 \<DESTINATION\> 이름으로 (없다면 생성)작업<br>push의 경우 삭제 될 수 있음
+
   - fakeTeamwork
     - : 원격 저장소에 새 커밋 생성
-    - \<n\> : [상동] + n개 생성
+    - \<n\> : 원격 저장소에 새 커밋 n개 생성
     - \<BRANCH\> \<n\> : 해당 브랜치에서부터 n개 생성
 
 ---
