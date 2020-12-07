@@ -4,8 +4,8 @@ header:
 title               : 자바 코드 컨벤션 # 제목
 excerpt             : Java Code Conventions # 썸네일 한줄 요약
 last_modified_at    : 2020-11-26 # 2020-11-22 # 작성일 또는 마지막 수정일
-categories          : course # java dataStructure algorithm git liquid math course / workout journal
-tags                : conventions
+categories          : conventions # java dataStructure algorithm git liquid math course / workout journal
+tags                : GoogleJavaCode Conventions
 toc                 : # 목차 사용 default: true
 toc_label           : # 목차 제목 default: "목차"
 # 알림박스 = {: .notice--info}

@@ -4,19 +4,24 @@ header:
 title               : 일급 객체 # 제목
 excerpt             : first class object # 썸네일 한줄 요약
 last_modified_at    : 2020-11-26 # 마지막 수정일
-categories          : etc
-tags                : terms
+categories          : oop
+tags                : OOP FirstClassObject
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목
 # {: .notice--info}
 ---
 ---
+이 글은 아래의 출처에서 내용을 참고하여 작성하였습니다.  
+출처 : [https://en.wikipedia.org/wiki/First-class_citizen](https://en.wikipedia.org/wiki/First-class_citizen)  
+[https://isooo.github.io/etc/2019/11/13/%EC%9D%BC%EA%B8%89%EA%B0%9D%EC%B2%B4.html](https://isooo.github.io/etc/2019/11/13/%EC%9D%BC%EA%B8%89%EA%B0%9D%EC%B2%B4.html)
 
-[https://en.wikipedia.org/wiki/First-class_citizen](https://en.wikipedia.org/wiki/First-class_citizen)
-
-위키에서는 일급 객체의 정의를 다음과 같이 내리고 있다  
 
 ---
+---
+
+## 일급 객체의 정의
+
+위키에서는 일급 객체의 정의를 다음과 같이 내리고 있다  
 
 ```
 Robin Popplestone gave the following  
@@ -43,13 +48,11 @@ definition: All items have certain fundamental rights.
 ---
 ---
 
-[https://isooo.github.io/etc/2019/11/13/%EC%9D%BC%EA%B8%89%EA%B0%9D%EC%B2%B4.html](https://isooo.github.io/etc/2019/11/13/%EC%9D%BC%EA%B8%89%EA%B0%9D%EC%B2%B4.html)
-
 다음은 모던 자바의 장점에 대해 기술한 글의 일부이다.
 
 ---
 
-일급 객체 (First-class citizen)
+## 일급 객체 (First-class citizen)
 
 ---
 

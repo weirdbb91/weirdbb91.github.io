@@ -2,6 +2,15 @@
    Syntax highlighting
    ========================================================================== */
 
+
+// `` 인라인 코드 서식
+code.language-plaintext.highlighter-rouge {
+  font-size: 110%;
+  color: khaki;
+}
+
+
+
 div.highlighter-rouge,
 figure.highlight {
   position: relative;

@@ -6,26 +6,40 @@ main:
     url: /tags
 
 docs:
-  - title: 복습
+  - title: Basic
     children:
-      - title: JAVA
-        url: /categories/#java
-      - title: 자료구조
+      - title: Data Structure
         url: /categories/#dataStructure
-      - title: 알고리즘
+      - title: Algorithm
         url: /categories/#algorithm
+      - title: Conventions
+        url: /categories/#conventions
       - title: Git
         url: /categories/#git
-      - title: 수학
-        url: /categories/#math
-      - title: 수업
-        url: /categories/#course
-      - title: ETC
-        url: /categories/#etc
 
-  - title: 기록
+  - title: OOP
+    url: /categories/#oop
     children:
+      - title: SOLID Principles
+        url: /categories/#solid
+
+  - title: GoF
+    url: /categories/#gof
+    children:
+      - title: Creational
+        url: /categories/#creational
+      - title: Structural
+        url: /categories/#structural
+      - title: Behavioral
+        url: /categories/#behavioral
+
+  - title: 그 외
+    children:
+      - title: Mathematics
+        url: /categories/#math
       - title: 운동
         url: /categories/#workout
       - title: 일기
         url: /categories/#journal
+      - title: Liquid
+        url: /categories/#liquid  

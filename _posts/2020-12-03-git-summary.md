@@ -5,7 +5,7 @@ title               : Git - sumup # 제목
 excerpt             : Git - Summary # 썸네일 한줄 요약
 last_modified_at    : 2020-12-03 # 마지막 수정일
 categories          : git
-tags                : git, summary
+tags                : Git Summary
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목
 # {: .notice--info}
