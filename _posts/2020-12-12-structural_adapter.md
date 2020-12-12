@@ -6,7 +6,7 @@ excerpt             : Structural Adapter Pattern # 썸네일 한줄 요약
 last_modified_at    : 2020-12-12 # 마지막 수정일
 categories          : gof
 tags                : DesignPattern GoF Structural Adapter
-toc                 : # 목차 사용여부
+toc                 : false # 목차 사용여부
 toc_label           : # 목차 제목
 # {: .notice--info}
 ---

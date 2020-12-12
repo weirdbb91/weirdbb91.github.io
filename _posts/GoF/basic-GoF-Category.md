@@ -46,7 +46,7 @@ toc_label           : # 목차 제목
 - Observer Pattern<br>(옵저버 패턴) 감시자
 - State Pattern<br>(상태 패턴)
 - ~~Strategy Pattern<br>(전략 패턴)~~
-- Template Method Pattern<br>(템플릿 메소드 패턴)
+- ~~Template Method Pattern<br>(템플릿 메소드 패턴)~~
 - Visitor Pattern<br>(방문자 패턴)
 
 
