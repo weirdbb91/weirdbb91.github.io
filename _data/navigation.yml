@@ -16,6 +16,8 @@ docs:
         url: /categories/#conventions
       - title: Git
         url: /categories/#git
+      - title: ETC
+        url: /categories/#etc
 
   - title: OOP
     url: /categories/#oop
