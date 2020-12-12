@@ -1,8 +1,8 @@
 ---
 header:
   teaser            : # 썸네일 이미지 /assets/images/face_army.jpg
-title               : Encapsulation # 제목
-excerpt             : 캡슐화 # 썸네일 한줄 요약
+title               : 캡슐화 # 제목
+excerpt             : Encapsulation # 썸네일 한줄 요약
 last_modified_at    : 2020-12-11 # 마지막 수정일
 categories          : oop
 tags                : OOP Encapsulation
