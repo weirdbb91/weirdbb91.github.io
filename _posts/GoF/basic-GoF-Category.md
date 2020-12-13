@@ -21,7 +21,7 @@ toc_label           : # 목차 제목
 
 - ~~Abstract Factory Pattern<br>(추상 팩토리 패턴)~~
 - Builder Pattern<br>(빌드 패턴)
-- Factory Method Pattern<br>(팩토리 메소드 함수)
+- ~~Factory Method Pattern<br>(팩토리 메소드 함수)~~
 - Prototype Pattern<br>(프로토타입 패턴) 원형
 - Singleton Pattern<br>(싱글톤 패턴) 단일체
 
