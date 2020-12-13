@@ -24,6 +24,7 @@ toc_label           : # 목차 제목
 |일반 class name<br>추상적 객체<\<class name\>>|첫줄|
 |멤버변수 attributes|중간|
 |메소드 methods|마지막|
+
 <br>
 
 ## 변수, 메소드 작성 방법
@@ -34,6 +35,7 @@ toc_label           : # 목차 제목
 |default|~|
 |protected|#|
 |private|-|
+
 <br>
 
 |예시|
@@ -42,6 +44,7 @@ toc_label           : # 목차 제목
 |- name : String|
 |+ setName(String)|
 |+ getName() : String|
+
 <br>
 
 ## 관계의 표기방법
@@ -55,3 +58,6 @@ toc_label           : # 목차 제목
 |집합연관<br>(Aggregation)|◇─|멤버변수지만 new는 안함, has a 관계|
 |복합연관<br>(Composition)|◆─|멤버변수이고 new도 함, own a 관계|
 |관계간의<br>다중성 표현|n ─ n<br>n ··· n|n : 수, .. : 또는, * : 이상<br>(1 : n의 관계, n : n의 관계 등)|
+
+---
+---
