@@ -15,10 +15,7 @@ toc_label           : # 목차 제목
 ## Template Method Pattern<br>(템플릿 메소드 패턴)
 행위 패턴(Object Behavioral)
 
-`일정한 단계`가 있는 알고리즘들을 나눠 `공통된 절차를 제외`한  
-`변경 가능성`이 있는 부분들을 `하위 클래스에서 구체화`하는 패턴  
-
-
+`일정한 단계`가 있는 알고리즘들을 나눠 `공통된 절차를 제외`한 `변경 가능성`이 있는 부분들을 `하위 클래스에서 구체화`하는 패턴  
 
 ```java
 // 단계별 구성
@@ -35,9 +32,6 @@ public abstract class Life {
     }
 }
 
-...
-
-
 // 하위 클래스에서 구체화
 public class DogLife extends Life {
     @Override
@@ -47,8 +41,6 @@ public class DogLife extends Life {
     @Override
     protected String sleep() { return "..."; }
 }
-
-...
 
 public class Main {
     public static void main(String[] args) {
