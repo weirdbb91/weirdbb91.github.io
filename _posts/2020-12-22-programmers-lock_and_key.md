@@ -40,7 +40,7 @@ toc_label           : # 목차 제목
 우선 열쇠 끝 - 자물쇠 시작부터 열쇠 시작 - 자물쇠 끝의 범위인  
 열쇠 길이 + 자물쇠 길이 - 1을 가중치의 범위로 정했다  
 
-hasKey 메소드로 확인 중인 자물쇠의 좌표와 가중치를 받아  
+keyHas 메소드로 확인 중인 자물쇠의 좌표와 가중치를 받아  
 결과 값이 열쇠의 좌표 범위 내에 있는지 반환했다
 
 그리고 rotate 메소드로 열쇠를 회전시켰다  
@@ -55,7 +55,7 @@ hasKey 메소드로 확인 중인 자물쇠의 좌표와 가중치를 받아
 class Solution {
     public boolean solution(int[][] key, int[][] lock) {
         for (int i = 0; i < 4; i++) {
-            if(check(key, lock)) return true;
+            if (check(key, lock)) return true;
             key = rotate(key);
         }
         return false;
