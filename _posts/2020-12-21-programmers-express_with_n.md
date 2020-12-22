@@ -6,7 +6,7 @@ excerpt             : 프로그래머스 문제 # 썸네일 한줄 요약
 last_modified_at    : 2020-12-21 # 마지막 수정일
 categories          : etc
 tags                : Programmers Solution
-toc                 : false # 목차 사용여부
+toc                 : # 목차 사용여부
 toc_label           : # 목차 제목
 # {: .notice--info}
 ---
