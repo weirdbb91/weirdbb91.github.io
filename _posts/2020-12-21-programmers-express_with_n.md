@@ -5,7 +5,7 @@ title               : N으로 표현 # 제목
 excerpt             : 프로그래머스 문제 # 썸네일 한줄 요약
 last_modified_at    : 2020-12-21 # 마지막 수정일
 categories          : etc
-tags                : Programmers Solution
+tags                : Programmers Solution Java
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목
 # {: .notice--info}
@@ -13,6 +13,8 @@ toc_label           : # 목차 제목
 
 ---
 ## 출처 [프로그래머스 - N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895)
+
+사용 언어 자바
 
 ### 입력
 
