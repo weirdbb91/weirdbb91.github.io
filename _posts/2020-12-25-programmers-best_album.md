@@ -12,7 +12,7 @@ toc_label           : # 목차 제목
 ---
 
 ---
-## 출처 [프로그래머스 - 입국심사](https://programmers.co.kr/learn/courses/30/lessons/42579)
+## 출처 [프로그래머스 - 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 
 사용 언어 자바
 
@@ -25,7 +25,7 @@ toc_label           : # 목차 제목
    
 ### 입력
 
-<곡은 인덱스로 구분함>
+(곡은 인덱스로 구분함)
 
 - 노래 장르 배열
 - 노래 재생 수 배열
