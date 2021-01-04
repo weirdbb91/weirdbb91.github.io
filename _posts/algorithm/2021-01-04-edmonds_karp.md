@@ -5,7 +5,7 @@ title               : Edmonds-Karp # 제목
 excerpt             : 최대 유량 알고리즘 # 썸네일 한줄 요약
 last_modified_at    : 2021-01-04 # 마지막 수정일
 categories          : algorithm
-tags                : Algorithm EdmondKarp
+tags                : Algorithm Edmonds-Karp
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목
 # {: .notice--info}
@@ -50,4 +50,4 @@ toc_label           : # 목차 제목
 이 알고리즘을 이해한 순간 정말 기분이 성스러워졌다  
 난 다른 경우의 수가 있을거라는 의심조차 못했거늘  
 
-깨달음을 전해주신 킹갓제네럴동빈님께 감사를 전합니다
+깨달음을 전해주신 `킹갓제네럴동빈`님께 감사를 전합니다
