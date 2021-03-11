@@ -100,7 +100,6 @@ UriSpec<RequestBodySpec> uriSpec = client.post();
 스트링으로 넘겨줘도 되고
 ```
 RequestBodySpec bodySpec = uriSpec.uri("/resource");
-Using a UriBuilder Function:
 ```
 
 빌더 패턴을 써도 된다
@@ -123,7 +122,7 @@ RequestHeadersSpec<?> headersSpec = bodySpec.body(
   Mono.just(new Foo("name")), Foo.class);
 ```
 
-아래의 BodyInserters 기능들을 이용할 수도 있다
+아래의 `BodyInserters 기능들`을 이용할 수도 있다
 
 1. fromValue()
 ```
@@ -152,8 +151,8 @@ RequestHeadersSpec<?> headersSpec = bodySpec.body(
 바디 정의 이후에 헤더, 쿠키, 허용타입 등을 지정할 수 있는데  
 이것들은 WebClient 인스턴스 생성 할 때 설정했던(또는 기본설정)것들에 추가됩니다
 
-“If-None-Match”, “If-Modified-Since”, “Accept”, “Accept-Charset”와 같이 자주 쓰이는 헤더들은 미리 넣어뒀다
-사용예시는 아래와 같다
+“If-None-Match”, “If-Modified-Since”, “Accept”, “Accept-Charset”와 같이 자주 쓰이는 것들은 미리 넣어뒀다
+사용 예시는 아래와 같다
 
 ```
 ResponseSpec responseSpec = headersSpec.header(
@@ -176,7 +175,8 @@ Mono<String> response = headersSpec.retrieve()
 ```
 
 그러나 응답 `결과에 따라 예외와 같은 다양한 처리`를 원한다면  
-`상태, 헤더에 접근 가능`한 `exchangeToMono()/exchangeToFlux()`를 추천한다
+`상태, 헤더에 접근 가능`한 `exchangeToMono()/exchangeToFlux()`를 추천한다  
+사용 예시는 아래와 같다
 ```
 Mono<String> response = headersSpec.exchangeToMono(response -> {
   if (response.statusCode()
