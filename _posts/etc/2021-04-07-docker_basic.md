@@ -69,9 +69,9 @@ CMD ["python", "./app/main.py"]
 
 ```
 # 도커 이미지 빌드 ( -t: 태그 )
-docker build -t 태그이름 .
+docker build -t 이미지태그이름 .
 
-# 도커 컨테이너 실행 ( -p: 포트 )
-docker run -p 호스트 포트:이미지 포트 태그이름
+# 도커 컨테이너 실행 ( --name: 컨테이너이름, -p: 포트 )
+docker run --name 컨테이너이름 -p 호스트포트:이미지포트 이미지태그이름
 ```
 
