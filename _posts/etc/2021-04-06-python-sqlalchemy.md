@@ -635,3 +635,213 @@ print(address_table.c.user_id > 10)
 address.user_id > :user_id_1 # 출력 결과물
 ```
 
+변환된 쿼리 비교문을 Select.where() 함수로 바로 전달 가능하다
+```py
+print(select(user_table).where(user_table.c.name == 'squidward'))
+# 츌력 결과물
+SELECT user_account.id, user_account.name, user_account.fullname
+FROM user_account
+WHERE user_account.name = :name_1
+```
+
+중첩 또한 가능하다
+```py
+print(
+    select(address_table.c.email_address).
+    where(user_table.c.name == 'squidward').
+    where(address_table.c.user_id == user_table.c.id)
+)
+# 츌력 결과물
+SELECT address.email_address
+FROM address, user_account
+WHERE user_account.name = :name_1 AND address.user_id = user_account.id
+```
+
+Select.where() 함수는 다중 조건도 수용한다
+```py
+print(
+    select(address_table.c.email_address).
+    where(
+         user_table.c.name == 'squidward',
+         address_table.c.user_id == user_table.c.id
+    )
+)
+# 출력 결과물
+SELECT address.email_address
+FROM address, user_account
+WHERE user_account.name = :name_1 AND address.user_id = user_account.id
+```
+
+물론 인자로 and\_()와 or\_() 함수도 사용이 가능하다
+```py
+from sqlalchemy import and_, or_
+print(
+    select(Address.email_address).
+    where(
+        and_(
+            or_(User.name == 'squidward', User.name == 'sandy'),
+            Address.user_id == User.id
+        )
+    )
+)
+# 출력 결과물
+SELECT address.email_address
+FROM address, user_account
+WHERE (user_account.name = :name_1 OR user_account.name = :name_2)
+AND address.user_id = user_account.id
+```
+
+단일 엔티티의 간단한 동일여부 확인에는 아래의 Select.filter_by() 함수도 많이 사용된다
+```py
+print(
+    select(User).filter_by(name='spongebob', fullname='Spongebob Squarepants')
+)
+# 출력 결과물
+SELECT user_account.id, user_account.name, user_account.fullname
+FROM user_account
+WHERE user_account.name = :name_1 AND user_account.fullname = :fullname_1
+```
+
+[SQLAlchemy의 연산자들](https://docs.sqlalchemy.org/en/14/core/operators.html)
+
+## 명시적 FROM과 JOIN
+
+일반적으로 선택할 항목에 대해 특별한 언급이 없다면 출처를 알아서 추론한다
+```py
+print(select(user_table.c.name))
+# ㅊㄹ ㄱㄱㅁ
+SELECT user_account.name
+FROM user_account
+```
+
+테이블이 달라도 각각 잘 가져온다
+```py
+print(select(user_table.c.name, address_table.c.email_address))
+# ㅊㄹ ㄱㄱㅁ
+SELECT user_account.name, address.email_address
+FROM user_account, address
+```
+
+조인하는 방법은 일반적으로 두 가지 중 하나를 쓴다  
+
+첫번째는 조인의 왼쪽 테이블과 오른쪽 테이블을 명시적으로 지정할 수 있는  
+Select.join_from() 함수다
+```py
+print(
+    select(user_table.c.name, address_table.c.email_address).
+    join_from(user_table, address_table)
+)
+# ㅊㄹ
+SELECT user_account.name, address.email_address
+FROM user_account JOIN address ON user_account.id = address.user_id
+```
+
+두 번째는 오른쪽만 지정하고 왼쪽은 추론하는 Select.join() 함수다
+```py
+print(
+    select(user_table.c.name, address_table.c.email_address).
+    join(address_table)
+)
+# ㅊㄹ
+SELECT user_account.name, address.email_address
+FROM user_account JOIN address ON user_account.id = address.user_id
+```
+
+Select.select_from() 함수로 선택 항목들의 범위(SQL에서의 ON)를 지정할 수 있다  
+```py
+print(
+    select(address_table.c.email_address).
+    select_from(user_table).join(address_table)
+)
+# ㅊㄹ
+SELECT address.email_address
+FROM user_account JOIN address ON user_account.id = address.user_id
+```
+
+
+네이티브 쿼리 SELECT count(*)는 sqlalchemy.sql.expression.func 모듈의  
+func.count('*') 함수로 표현할 수 있다
+```py
+from sqlalchemy import func
+print (
+    select(func.count('*')).select_from(user_table)
+)
+# print
+SELECT count(:count_2) AS count_1
+FROM user_account
+```
+
+## ON 구문 설정
+
+Select의 join()과 join_from() 함수 둘 다  
+아래와 같이 ON 구문을 위한 추가 인자 전달을 지원한다  
+
+```py
+print(
+    select(address_table.c.email_address).
+    select_from(user_table).
+    join(address_table, user_table.c.id == address_table.c.user_id)
+)
+# print
+SELECT address.email_address
+FROM user_account JOIN address ON user_account.id = address.user_id
+```
+
+## OUTTER와 FULL join
+
+.join()과 join_from() 모두 키워드 인자로  
+각각 SQL의 LEFT OUTER JOIN, FULL OUTER JOIN의 역할을 하는  
+Select.joind의 .isouter와 .full을 지원한다  
+
+```py
+print(  
+    select(user_table).join(address_table, isouter=True)
+)
+# print
+SELECT user_account.id, user_account.name, user_account.fullname
+FROM user_account LEFT OUTER JOIN address ON user_account.id = address.user_id
+# .join(..., isouter=True) 대신 .outerjoin(...)를 써도 된다
+
+print(
+    select(user_table).join(address_table, full=True)
+)
+# print
+SELECT user_account.id, user_account.name, user_account.fullname
+FROM user_account FULL OUTER JOIN address ON user_account.id = address.user_id
+```
+
+### 팁
+
+SQL에는 RIGHT OUTER JOIN이 있지만 SQLAlchemy에는 없다  
+대신 LEFT OUTER JOIN을 하고 테이블들을 역순으로 정렬하면 된다
+
+## ORDER BY
+
+Select.order_by() 함수로 아래와 같이 정렬이 가능하다
+```py
+print(select(User).order_by(User.name.asc(), User.fullname.desc()))
+# print
+SELECT user_account.id, user_account.name, user_account.fullname
+FROM user_account ORDER BY user_account.name ASC, user_account.fullname DESC
+```
+
+
+Group by...
+
+```py
+with engine.connect() as conn:
+    result = conn.execute(
+        select(User.name, func.count(Address.id).label("count")).
+        join(Address).
+        group_by(User.name).
+        having(func.count(Address.id) > 1)
+    )
+    print(result.all())
+
+# print
+BEGIN (implicit)
+SELECT user_account.name, count(address.id) AS count
+FROM user_account JOIN address ON user_account.id = address.user_id GROUP BY user_account.name
+HAVING count(address.id) > ?
+[...] (1,)
+```
