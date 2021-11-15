@@ -4,7 +4,7 @@ header:
 title               : 팩토리 메소드 패턴 # 제목
 excerpt             : Creational Factory Method Pattern # 썸네일 한줄 요약
 last_modified_at    : 2020-12-13 # 마지막 수정일
-categories          : gof
+categories          : DesignPattern Creational
 tags                : DesignPattern GoF Creational FactoryMethod
 toc                 : false # 목차 사용여부
 toc_label           : # 목차 제목

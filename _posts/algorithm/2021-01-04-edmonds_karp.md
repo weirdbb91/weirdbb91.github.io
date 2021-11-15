@@ -4,7 +4,7 @@ header:
 title               : Edmonds-Karp # 제목
 excerpt             : 최대 유량 알고리즘 # 썸네일 한줄 요약
 last_modified_at    : 2021-01-04 # 마지막 수정일
-categories          : algorithm
+categories          : Algorithm
 tags                : Algorithm Edmonds-Karp
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목

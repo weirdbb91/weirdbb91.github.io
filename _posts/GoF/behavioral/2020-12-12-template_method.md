@@ -4,7 +4,7 @@ header:
 title               : 템플릿 메소드 패턴 # 제목
 excerpt             : Behavioral Template Method Pattern # 썸네일 한줄 요약
 last_modified_at    : 2020-12-12 # 마지막 수정일
-categories          : gof
+categories          : DesignPattern Behavioral
 tags                : DesignPattern GoF Behavioral TemplateMethod
 toc                 : false # 목차 사용여부
 toc_label           : # 목차 제목

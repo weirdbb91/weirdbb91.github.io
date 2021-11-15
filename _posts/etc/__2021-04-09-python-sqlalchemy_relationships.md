@@ -4,7 +4,7 @@ header:
 title               : SQLAlchemy 관계설정 # 제목
 excerpt             : 파이썬 SQLAlchemy 관계설정 # 썸네일 한줄 요약
 last_modified_at    : 2021-04-09 # 마지막 수정일
-categories          : etc
+categories          : ETC
 tags                : Python SQLAlchemy ORM Relationship
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목

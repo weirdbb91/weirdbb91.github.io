@@ -4,7 +4,7 @@ header:
 title               : 일급 객체 # 제목
 excerpt             : first class object # 썸네일 한줄 요약
 last_modified_at    : 2020-11-26 # 마지막 수정일
-categories          : oop
+categories          : OOP
 tags                : OOP FirstClassObject
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목

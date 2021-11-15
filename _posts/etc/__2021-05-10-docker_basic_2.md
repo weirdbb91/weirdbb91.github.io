@@ -4,7 +4,7 @@ header:
 title               : 도커 기본 2 # 제목
 excerpt             : 도커 기본 # 썸네일 한줄 요약
 last_modified_at    : 2021-05-10 # 마지막 수정일
-categories          : etc
+categories          : ETC
 tags                : Docker Python
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목

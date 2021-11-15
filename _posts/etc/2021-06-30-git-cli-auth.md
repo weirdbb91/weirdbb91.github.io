@@ -4,7 +4,7 @@ header:
 title               : 깃 토큰 인증  # 제목
 excerpt             : 깃 비밀번호 deprecated의 대안 토큰 인증 # 썸네일 한줄 요약
 last_modified_at    : 2021-06-30 # 마지막 수정일
-categories          : etc
+categories          : ETC
 tags                : Git Auth Token
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목

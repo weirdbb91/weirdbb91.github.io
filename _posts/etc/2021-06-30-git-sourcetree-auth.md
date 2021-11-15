@@ -4,7 +4,7 @@ header:
 title               : 소스트리 깃 토큰 인증  # 제목
 excerpt             : 깃 토큰을 이용한 소스트리 인증 # 썸네일 한줄 요약
 last_modified_at    : 2021-06-30 # 마지막 수정일
-categories          : etc
+categories          : ETC
 tags                : Sourcetree Git Auth Token
 toc                 : # 목차 사용여부
 toc_label           : # 목차 제목
