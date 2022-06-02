@@ -50,7 +50,8 @@
   margin-top: 0;
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
-  line-height: initial;
+//   포스트 줄 밀림 문제로 주석 처리 (2022-06-02-post_list_gap_fix.md 문서 참조)
+//   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
   // 아래는 수정본입니다.
