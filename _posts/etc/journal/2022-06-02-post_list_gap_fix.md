@@ -11,10 +11,10 @@ tags        : 일기
 그러나 그 중 중 좌측을 기준으로 한칸 또는 두 칸의 공백이 생기는 경우가 있었다.
 
 자료화면 1
-<img src="/assets/images/row_error_image_1.png" alt="자료화면1">
+<img src="/assets/images/posts/2022-06-02-post_list_gap_fix/row_error_image_1.png" alt="자료화면1">
 
 자료화면 2
-<img src="/assets/images/row_error_image_2.png" alt="자료화면2">
+<img src="/assets/images/posts/2022-06-02-post_list_gap_fix/row_error_image_2.png" alt="자료화면2">
 
 ---
 
