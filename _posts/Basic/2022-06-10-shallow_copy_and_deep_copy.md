@@ -79,8 +79,8 @@ b.data = 2;
 
 ## 자바의 String
 
-[자바의 String](../../Language/Java/string_in_java) 클래스는 문자열을 저장하는 클래스이다.  
-[자바의 String](../../Language/Java/string_in_java) 클래스는 불변(Immutable)의 성질을 가지고 있어  
+[자바의 String](../../language/java/string_in_java/) 클래스는 문자열을 저장하는 클래스이다.  
+[자바의 String](../../language/java/string_in_java/) 클래스는 불변(Immutable)의 성질을 가지고 있어  
 변경이 불가하므로,  
 얕은 복사를 하더라도 주소 값 자체가 변경되기 때문에  
 같은 객체를 참조하던 다른 변수가 영향을 받을 일은 없다.  
