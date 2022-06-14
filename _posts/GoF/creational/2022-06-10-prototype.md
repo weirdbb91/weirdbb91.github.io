@@ -25,6 +25,10 @@ tags                : DesignPattern GoF Creational Prototype
 - PrototypeManager: 프로토타입들을 생성하고 관리하는 클래스(생략 가능)
 - Client: PrototypeManager에게 Prototype 복제본을 요청하는 요청자
 
+## Class diagram
+
+<img src="/assets/images/posts/2022-06-10-prototype/diagram.png" alt="클래스_다이어그램">
+
 ## 예시
 
 ```java

@@ -11,8 +11,8 @@ toc_label           : # 목차 제목
 # {: .notice--info}
 ---
 
----
 ## Abstract Factory Pattern<br>(추상 팩토리 패턴)
+
 객체 생성 패턴(Object Creational)
 
 생산 제품군 전체를 마치 테마를 바꾸듯 간단하게 교체하기위해  
@@ -21,6 +21,12 @@ toc_label           : # 목차 제목
 
 객체의 생성의 세부사항과 의존성을 다른객체로부터 보호하고  
 생성에 대한 결합도를 모듈 단위로 계층화 시키는게 가능해진다  
+
+## Class diagram
+
+<img src="/assets/images/posts/2020-12-13-abstract_factory/diagram.png" alt="클래스_다이어그램">
+
+## 예시
 
 ```java
 class ExampleClass {
@@ -47,8 +53,6 @@ interface Factory {
 }
 ```
 
----
----
 ## 팩토리 메소드와의 차이
 
 생산 제품군 전체를 마치 테마를 바꾸듯 간단하게 교체하기위해  
@@ -57,6 +61,3 @@ interface Factory {
 
 팩토리 메소드는 호출시에 `적절한 객체를 반환하는 메소드`이고  
 추상 팩토리 외에도 다방면으로 활용되는 더 작은 개념이라고 볼 수 있다  
-
----
----

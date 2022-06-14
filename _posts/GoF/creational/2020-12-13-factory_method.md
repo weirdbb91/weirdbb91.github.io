@@ -11,14 +11,20 @@ toc_label           : # 목차 제목
 # {: .notice--info}
 ---
 
----
 ## Factory Method Pattern<br>(팩토리 메소드 패턴)
+
 생성 패턴(Object Creational)
 
 호출시에 `적절한 객체를 반환하는 메소드`로  
 
 객체 생성 목적의 인터페이스 또는 추상 클래스를 정의하고  
 객체 `생성의 책임`을 구체화하는 `하위 클래스로 넘긴다`  
+
+## Class diagram
+
+<img src="/assets/images/posts/2020-12-13-factory_method/diagram.png" alt="클래스_다이어그램">
+
+## 예시
 
 ```java
 class SuperClass {

@@ -17,6 +17,10 @@ tags                : DesignPattern GoF Creational Singleton
 특정 클래스의 객체가 단 하나만 인스턴스화 되도록 하는 패턴이다.  
 요청 이전의 인스턴스화 여부에 따라 주로 두 가지로 구현방법이 나뉜다.  
 
+## Class diagram
+
+<img src="/assets/images/posts/2022-06-14-singleton/diagram.png" alt="클래스_다이어그램">
+
 ## Lazy initialization
 
 요청을 받으면 그 때 인스턴스화하는 방법이다.  
