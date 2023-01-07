@@ -21,27 +21,25 @@ tags                : Basic Spring StateMachine
 
 [간단 소개 링크](https://spring.io/projects/spring-statemachine)
 
-
-
 ## 구성
 
 - State: 관리의 대상이 되는 상태 값
 
   - Initial State: 초기 상태값  
-![image](https://user-images.githubusercontent.com/50126248/210174713-3b1090fc-aef1-4bf3-af4f-00ba00c1465c.png)
+![image](https://user-images.githubusercontent.com/50126248/210174713-3b1090fc-aef1-4bf3-af4f-00ba00c1465c.png)  
   - End State: 완료 상태값  
-![image](https://user-images.githubusercontent.com/50126248/210174731-9c6db5a7-a92b-4d75-86d7-a11c1d541aff.png)
+![image](https://user-images.githubusercontent.com/50126248/210174731-9c6db5a7-a92b-4d75-86d7-a11c1d541aff.png)  
   - Source State: 변경 이전의 원래 상태  
-![image](https://user-images.githubusercontent.com/50126248/210174774-072e9644-2e9f-4281-99bb-fb9d9485c509.png)
+![image](https://user-images.githubusercontent.com/50126248/210174774-072e9644-2e9f-4281-99bb-fb9d9485c509.png)  
   - Target State: 변경을 목표로 하는 상태  
-![image](https://user-images.githubusercontent.com/50126248/210174778-b2cb19f5-0b84-4020-ab31-a0ac79068fbb.png)
+![image](https://user-images.githubusercontent.com/50126248/210174778-b2cb19f5-0b84-4020-ab31-a0ac79068fbb.png)  
 - StateMachine: State의 변경 규칙 명세  
-![image](https://user-images.githubusercontent.com/50126248/210174794-c30460c6-a1c0-409d-ad27-dd793123db4a.png)
-- Event: State에 변경이 발생하게 되는 계기    
+![image](https://user-images.githubusercontent.com/50126248/210174794-c30460c6-a1c0-409d-ad27-dd793123db4a.png)  
+- Event: State에 변경이 발생하게 되는 계기  
   ex) 장착, 탈착, 폐기 등
 
 - Transition: State의 변경, 변이, 변화 등  
-![image](https://user-images.githubusercontent.com/50126248/210174804-cc09f410-c65a-4992-9d09-562a819caa3f.png)
+![image](https://user-images.githubusercontent.com/50126248/210174804-cc09f410-c65a-4992-9d09-562a819caa3f.png)  
 - Guard: Event가 발생했을 때, 조건을 검증하는 관문(반환값이 false일 경우, Transition은 일어나지 않는다.)
 
   - 폐기 Event 발생시의 Guard 예시) Source State == 유휴 && 폐기 승인 목록에 존재
@@ -68,11 +66,11 @@ implementation 'org.springframework.statemachine:spring-statemachine-core:2.1.3.
 
     관리할 State와 Event를 Enum 타입으로 정의합니다.  
     String 타입으로도 가능하지만, 유지보수 편의성을 위해 Enum 타입으로 정의하겠습니다.  
-    ![image](https://user-images.githubusercontent.com/50126248/210174892-090ba990-427e-4e61-b6fb-ed23be8002cb.png)
+    ![image](https://user-images.githubusercontent.com/50126248/210174892-090ba990-427e-4e61-b6fb-ed23be8002cb.png)  
 2. State machine 설정
 
     1. Entity에 필드로 State 추가  
-    ![image](https://user-images.githubusercontent.com/50126248/210174906-f482fd5f-7313-460f-b8e3-42183501321c.png)
+    ![image](https://user-images.githubusercontent.com/50126248/210174906-f482fd5f-7313-460f-b8e3-42183501321c.png)  
     2. Entity Repository 생성  
     ![image](https://user-images.githubusercontent.com/50126248/210174924-60425a10-159a-4d87-83e5-339a41e38ab2.png)  
     ![image](https://user-images.githubusercontent.com/50126248/210174928-dd98a7b0-aea0-400a-b9d0-b64968772ddf.png)  
@@ -80,20 +78,20 @@ implementation 'org.springframework.statemachine:spring-statemachine-core:2.1.3.
     3. StateMachineConfigurerAdapter를 상속받는 설정 Class를 생성합니다.  
     ![image](https://user-images.githubusercontent.com/50126248/210174949-56cce44d-e936-4da2-b270-22492ff53b60.png)  
     StateMachineFactory를 사용할 수 있도록 @EnableStateMachineFactory을 꼭 추가해줍니다.  
-        1. State 등록
-        ![image](https://user-images.githubusercontent.com/50126248/210174982-0b55b25d-f246-4c49-bdc1-0b3791f36396.png)
+        1. State 등록  
+        ![image](https://user-images.githubusercontent.com/50126248/210174982-0b55b25d-f246-4c49-bdc1-0b3791f36396.png)  
         위와 같이 Initial State와 End State, 그리고 사용할 모든 State를 등록해줍니다.
 
-        2. Transition 설정
-        ![image](https://user-images.githubusercontent.com/50126248/210175025-c2d5f49f-3a95-474a-a1b3-8121b5d9a61b.png)
+        2. Transition 설정  
+        ![image](https://user-images.githubusercontent.com/50126248/210175025-c2d5f49f-3a95-474a-a1b3-8121b5d9a61b.png)  
         위와 같이 어떤 Source state에서 어떤 Event가 발생했을 때 어떤 Target state로 Transition이 발생하고,해당 Transition에 어떤 guard나 action이 있는지 추가해줍니다.
 
-        3. StateMachineListener 등록(선택)
-        ![image](https://user-images.githubusercontent.com/50126248/210175038-85f58c8d-4c75-4947-bef8-df85d49a3b71.png)
+        3. StateMachineListener 등록(선택)  
+        ![image](https://user-images.githubusercontent.com/50126248/210175038-85f58c8d-4c75-4947-bef8-df85d49a3b71.png)  
         필요하다면, State의 변경사항을 감지해 특정 로직을 수행하는 Listener를 등록합니다.
 
-3. MediaStateChangeInterceptor
-![image](https://user-images.githubusercontent.com/50126248/210175054-a89e8a22-4292-48ef-9b77-0d99bfffa30e.png)
+3. MediaStateChangeInterceptor  
+![image](https://user-images.githubusercontent.com/50126248/210175054-a89e8a22-4292-48ef-9b77-0d99bfffa30e.png)  
 위 인터셉터의 목적은 state 변경사항을 Entity에 반영하기 위함입니다.  
 그러므로 Entity를 수정하기 위해 Entity Repository를 필드로 가집니다.  
 StateMachineInterceptorAdapter<>를 상속받아,  
@@ -102,33 +100,33 @@ preStateChange 메소드 안에서 메시지의 Header를 통해 Entity의 id를
 변경된 state로 Entity를 수정해줍니다.
 
 4. Entity Service에 StateMachineFactory 추가  
-![image](https://user-images.githubusercontent.com/50126248/210175080-fa82d2c6-f68b-4f08-814e-93c327e5ed3e.png)
+![image](https://user-images.githubusercontent.com/50126248/210175080-fa82d2c6-f68b-4f08-814e-93c327e5ed3e.png)  
 
-- MEDIA_ID_HEADER: 아래에서 다루는 Message의 HeaderName이 될 값
+   - MEDIA_ID_HEADER: 아래에서 다루는 Message의 HeaderName이 될 값
 
-- MediaStateChangeInterceptor: state 변경사항을 Entity에 반영하는 인터셉터
+   - MediaStateChangeInterceptor: state 변경사항을 Entity에 반영하는 인터셉터
 
-    Entity Service에 위 두 필드와 함께 StateMachineFactory를 추가합니다.
+       Entity Service에 위 두 필드와 함께 StateMachineFactory를 추가합니다.
 
-    1. StateMachine 인스턴스 가져오기  
-        ![image](https://user-images.githubusercontent.com/50126248/210175186-8d6154b7-4bc3-45b1-98e8-0edce705658b.png)  
-        build(Long mediaId) 메소드에서는 stateMachineFactory의  
-        getStateMachine(String machineId) 메소드를 통해  
-        StateMachine 인스턴스를 생성해 반환 받습니다.  
-        Accessor를 이용해 state 변경사항을 반영하는 인터셉터를 추가하고,  
-        마지막으로 Media(Entity)의 state로 StateMachine을 초기화 해 반환합니다.  
+       1. StateMachine 인스턴스 가져오기  
+           ![image](https://user-images.githubusercontent.com/50126248/210175186-8d6154b7-4bc3-45b1-98e8-0edce705658b.png)  
+           build(Long mediaId) 메소드에서는 stateMachineFactory의  
+           getStateMachine(String machineId) 메소드를 통해  
+           StateMachine 인스턴스를 생성해 반환 받습니다.  
+           Accessor를 이용해 state 변경사항을 반영하는 인터셉터를 추가하고,  
+           마지막으로 Media(Entity)의 state로 StateMachine을 초기화 해 반환합니다.  
 
-    2. Event 생성  
-        ![image](https://user-images.githubusercontent.com/50126248/210175199-c8e75109-ea7b-4d0a-b1a3-2245f8f51996.png)  
-        sendEvent(Long mediaId, StateMachine<> sm, MediaEvent event) 메소드에서는  
-        StateMachine에 Event를 전송합니다.  
-        이 때 MEDIA_ID_HEADER를 headerName으로 가지는 Header를 Message에 추가해서  
-        Event가 발생한 Media(Entity)의 id를 전달합니다.
+       2. Event 생성  
+           ![image](https://user-images.githubusercontent.com/50126248/210175199-c8e75109-ea7b-4d0a-b1a3-2245f8f51996.png)  
+           sendEvent(Long mediaId, StateMachine<> sm, MediaEvent event) 메소드에서는  
+           StateMachine에 Event를 전송합니다.  
+           이 때 MEDIA_ID_HEADER를 headerName으로 가지는 Header를 Message에 추가해서  
+           Event가 발생한 Media(Entity)의 id를 전달합니다.
 
-    3. 실 사용 예시  
-        ![image](https://user-images.githubusercontent.com/50126248/210175222-e304610b-012c-4e76-a5dc-22da92ac39f3.png)  
-        위 4.1에서 설명한 build 메소드로 StateMachine 인스턴스를 받아,  
-        위 4.2에서 설명한 sendEvent 메소드를 통해 Event를 전송합니다.
+       3. 실 사용 예시  
+           ![image](https://user-images.githubusercontent.com/50126248/210175222-e304610b-012c-4e76-a5dc-22da92ac39f3.png)  
+           위 4.1에서 설명한 build 메소드로 StateMachine 인스턴스를 받아,  
+           위 4.2에서 설명한 sendEvent 메소드를 통해 Event를 전송합니다.
 
 5. 실 사용 흐름 정리
 
