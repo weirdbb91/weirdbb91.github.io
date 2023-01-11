@@ -118,4 +118,3 @@ private List<Member> members;
 
 - 단방향 연관관계만 잘 매핑 설정해두면,  
     양방향은 필요할 때 추가해도 된다
-
